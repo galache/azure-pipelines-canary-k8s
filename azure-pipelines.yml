@@ -30,12 +30,7 @@ stages:
         Dockerfile: app/Dockerfile
         tags: |
           $(tag)
-
-    - upload: manifests
-      artifact: manifests
-
-    - upload: misc
-      artifact: misc
+          
 - stage: DeployCanary
   displayName: Deploy canary
   dependsOn: Build
