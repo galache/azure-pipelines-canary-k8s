@@ -5,8 +5,8 @@ pool:
   vmImage: Ubuntu-16.04
 
 variables:
-  imageName: azure-pipelines-canary-k8s
-  dockerRegistryServiceConnection: azure-docker-canary-k8s
+  imageName: 'azure-pipelines-canary-k8s'
+  dockerRegistryServiceConnection: 'azure-docker-canary-k8s'
   imageRepository: 'azure-pipelines-canary-k8s'
   containerRegistry: index.docker.io/v1/ #replace #replace with the name of your container registry, Should be in the format foobar.azurecr.io
   tag: '$(Build.BuildId)'
