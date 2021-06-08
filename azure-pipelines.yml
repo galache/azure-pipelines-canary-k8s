@@ -25,7 +25,7 @@ stages:
       displayName: Build and push image
       inputs:
         containerRegistry: $(dockerRegistryServiceConnection)
-        repository: $(dockerRegistryServiceConnection)/$(imageName)
+        repository: galache/$(imageName)
         command: buildAndPush
         Dockerfile: app/Dockerfile
         tags: |
