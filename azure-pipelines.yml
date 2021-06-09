@@ -86,8 +86,6 @@ stages:
   jobs:
   - deployment: PromoteCanary
     displayName: Promote Canary
-    pool: 
-      vmImage: Ubuntu-16.04
     environment: 'akspromote.canarydemo'
     strategy:
       runOnce:
@@ -109,8 +107,6 @@ stages:
   jobs:
   - deployment: RejectCanary
     displayName: Reject Canary
-    pool: 
-      vmImage: Ubuntu-16.04
     environment: 'akscanary.canarydemo'
     strategy:
       runOnce:
