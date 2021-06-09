@@ -10,7 +10,7 @@ variables:
   dockerRegistryServiceConnection: 'azure-docker-canary-k8s'
   imageRepository: 'galache'
   containerRegistry: index.docker.io/galache #replace #replace with the name of your container registry, Should be in the format foobar.azurecr.io
-  tag: '$(Build.BuildId)'
+  tag: latest #'$(Build.BuildId)'
 
 
 stages:
