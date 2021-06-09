@@ -9,7 +9,7 @@ variables:
   imageName: 'azure-pipelines-canary-k8s'
   dockerRegistryServiceConnection: 'azure-docker-canary-k8s'
   imageRepository: 'galache'
-  #containerRegistry: index.docker.io/v1/ #replace #replace with the name of your container registry, Should be in the format foobar.azurecr.io
+  containerRegistry: index.docker.io/galache #replace #replace with the name of your container registry, Should be in the format foobar.azurecr.io
   tag: '$(Build.BuildId)'
 
 
@@ -70,7 +70,7 @@ stages:
                 $(Pipeline.Workspace)/manifests/deployment.yml
                 $(Pipeline.Workspace)/manifests/service.yml
               containers: '$(containerRegistry)/$(imageRepository):$(tag)'
-              imagePullSecrets: AGL2016m #canarydemo/azure-pipelines-canary-k8s
+              imagePullSecrets: azure-pipelines-canary-k8s
 
           - task: KubernetesManifest@0
             displayName: Deploy Forbio and ServiceMonitor
