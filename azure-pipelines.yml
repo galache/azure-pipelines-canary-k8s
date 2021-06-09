@@ -1,8 +1,9 @@
 trigger:
 - master
 
-pool:
-  vmImage: Ubuntu-16.04
+pool: 
+  name: 'Default'
+  vmImage: 'ubuntu-latest'
 
 variables:
   imageName: 'azure-pipelines-canary-k8s'
