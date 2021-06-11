@@ -19,8 +19,6 @@ stages:
   jobs:  
   - job: Build
     displayName: Build
-    pool:
-      vmImage: Ubuntu-16.04
     steps:
     - task: Docker@2
       displayName: Build and push image
@@ -46,8 +44,6 @@ stages:
   jobs:
   - deployment: Deploycanary
     displayName: Deploy canary
-    pool:
-      vmImage: Ubuntu-16.04
     environment: 'akscanary.canarydemo'
     strategy:
       runOnce:
