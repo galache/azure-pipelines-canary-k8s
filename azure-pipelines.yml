@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       displayName: Build and push image
       inputs:
-        containerRegistry: dockerhub-pipelines-canary-k8s
+        containerRegistry:  $(dockerRegistryServiceConnection)
         repository: $(imageName)
         command: buildAndPush
         Dockerfile: app/Dockerfile
