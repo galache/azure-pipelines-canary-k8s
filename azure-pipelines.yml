@@ -27,7 +27,8 @@ stages:
         repository: $(imageName)
         command: buildAndPush
         Dockerfile: app/Dockerfile
-        tags: latest
+        tags: |
+          $(tag)
           
     - upload: manifests
       artifact: manifests
