@@ -8,7 +8,7 @@ variables:
   imageName: azure-pipelines-canary-k8s
   dockerRegistryServiceConnection: dockerhub-pipelines-canary-k8s 
   imageRepository: galache
-  containerRegistry: index.docker.io
+  #containerRegistry: index.docker.io
   tag: '$(Build.BuildId)'
 
 stages:
@@ -20,11 +20,6 @@ stages:
     pool:
       vmImage: Ubuntu-16.04
     steps:
-    - task: Docker@2
-      name: task_dockerhub_login
-      inputs:
-          containerRegistry: '$(dockerRegistryServiceConnection)'
-          command: 'login'
     - task: Docker@2
       displayName: Build and push image
       inputs:
