@@ -8,7 +8,6 @@ variables:
   imageName: azure-pipelines-canary-k8s
   dockerRegistryServiceConnection: dockerhub-pipelines-canary-k8s 
   imageRepository: galache
-  #containerRegistry: index.docker.io
   tag: '$(Build.BuildId)'
 
 stages:
