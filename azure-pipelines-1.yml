@@ -33,4 +33,4 @@ stages:
         command: buildAndPush
         Dockerfile: app/Dockerfile
         tags: |
-          latest
+          tag
